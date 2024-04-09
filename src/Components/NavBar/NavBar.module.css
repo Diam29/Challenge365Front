@@ -1,0 +1,147 @@
+.container_fluid {
+  /* position: static;
+  padding: 1rem 0rem 0rem 0rem;
+  background-color: #D7E4C0;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: justify;
+  border: red 1px solid ; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.container__box {
+  /* display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  background-color: transparent;
+  border: #FFAA64 1px solid; */
+  display: flex;
+  align-items: center;
+}
+
+.rounded_pill {
+  width: 40px;
+  height: 40px;
+  align-self: self-start;
+  background-color: #C6DCBA;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: #BBC3A4 0 5px 10px;
+  margin-right: 50rem;
+}
+
+.rounded_pill:hover {
+  color: var(--color-text);
+  background-color: #B47B84;
+  box-shadow: #944E63 0 10px 20px;
+  transform: translateY(-3px);
+}
+
+.rounded_pill:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.link__logo {
+  text-decoration: none;
+  margin-right: 10px;
+  color: #FFC94A;
+}
+
+.link__logo:hover {
+  color: #944E63;
+}
+
+.navbar__text {
+  font-weight: 700;
+  color: #D7E4C0;
+}
+
+
+.button__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(#D7E4C080, #FFC94A80);
+  background-position: center;
+  background-size: cover;
+  width: 44px;
+  height: 44px;
+}
+
+.icon__inicio {
+  font-size: 30px;
+  color: #944E63;
+}
+
+.icon {
+  width: 50px;
+  color: #FFAA64;
+  font-size: 30px;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease;
+}
+
+.icon:hover {
+  color: #FF6464;
+  box-shadow: 0 0 10px 5px #FF6464;
+}
+
+.display__login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+
+
+  .navbar__text {
+      display: none;
+  }
+
+  .icon {
+      font-size: 20px;
+  }
+
+  .button__icon {
+      width: 30px;
+      height: 30px;
+  }
+
+  .icon__inicio {
+      font-size: 20px;
+  }
+
+  .link__logo {
+      width: 20px;
+  }
+
+  .rounded_pill {
+      width: 30px;
+      height: 30px;
+  }
+}
+
+.sign_out__button{
+  background-color: #944E63;
+  border: none;
+  color: #FFF2E1;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}

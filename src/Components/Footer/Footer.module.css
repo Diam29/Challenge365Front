@@ -1,0 +1,36 @@
+.container{
+  width: 100vw;
+  height: 500px;
+  background-color: #B47B84;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #FFF2E1;
+}
+
+.contain_icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.icon{
+  font-size: 30px;
+  margin-top: 2rem;
+  color: #D7E4C0;
+}
+
+.icon:hover{
+  color: #FFF2E1;
+  cursor: pointer;
+}
+
+.copyright{
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #D7E4C0;
+}

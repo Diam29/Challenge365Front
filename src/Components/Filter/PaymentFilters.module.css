@@ -1,0 +1,55 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  margin-top: 1.2rem;
+}
+
+.input_filter{
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(#D7E4C080, #FFC94A80);
+  color: #FFF2E1;
+  font-size: 1rem;
+  width: 10rem;
+}
+
+.input_filter:hover{
+  cursor: pointer;
+  background: linear-gradient(#D7E4C0, #FFC94A);
+  color: #FFF2E1;
+}
+
+.button_filterClean{
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(#B47B84, #944E63);
+  color: #3E3232;
+  font-size: 1rem;
+  width: 10rem;
+}
+
+.button_filterClean:hover{
+  cursor: pointer;
+  color: #FFE7E7;
+}
+
+.button_filterOk{
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(#C6DCBA, #D7E4C0);
+  color: #3E3232;
+  font-size: 1rem;
+  width: 10rem;
+}
+
+.button_filterOk:hover{
+  cursor: pointer;
+  color: #43766C;
+}
