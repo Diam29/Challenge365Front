@@ -14,11 +14,12 @@ const Home = () => {
   const [payments, setPayments] = useState([]);
   const [editingPaymentId, setEditingPaymentId] = useState(null);
   const [filteredPayments, setFilteredPayments] = useState([]);
-
+  const id = localStorage.getItem('id')
   useEffect(() => {
-    const loadingPayments = async () => {
+    const loadingPayments = async (id) => {
+      
       try {
-        const response = await paymentService.getAllPayments();
+        const response = await paymentService.getAllPayments(id);
         console.log('soy el date desde home', response);
         setPayments(response);
       } catch (error) {
@@ -26,7 +27,7 @@ const Home = () => {
       }
     };
     loadingPayments();
-  }, []);
+  }, [id]);
 
   const handleDeletePayment = async (id) => {
     try {

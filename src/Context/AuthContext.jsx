@@ -80,6 +80,7 @@ export const AuthProvider = ({ children }) => {
                 photoURL: user.photoURL
             }
             await axios.post('http://localhost:3000/user/createUser', userData)
+            console.log('error interno google')
             return authResult;
           
         } catch (error) {

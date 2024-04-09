@@ -7,9 +7,9 @@ const API_URL = 'http://localhost:3000/pay';
 const paymentService = {
 
   
-  async getAllPayments() {
+  async getAllPayments(id) {
 
-    return axios.get(API_URL).then(response => response.data)
+    return axios.get(`${API_URL}/${id}`).then(response => response.data)
       
   },    
     
