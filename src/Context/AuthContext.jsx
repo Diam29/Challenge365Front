@@ -46,7 +46,6 @@ export const AuthProvider = ({ children }) => {
               displayName: response.user.displayName,
               photoURL: response.user.photoURL
             }
-            // localStorage.setItem('id', response.user.uid);
             await axios.post('http://localhost:3000/user/createUser', userData)
             return response
         } catch (error) {
@@ -59,7 +58,6 @@ export const AuthProvider = ({ children }) => {
         try {
             const response = await signInWithEmailAndPassword(auth, email, password)
             setUser(response.user)
-            // localStorage.setItem('id', response.user.uid);
             return response
         } catch (error) {
             setError(error.message)
@@ -73,7 +71,6 @@ export const AuthProvider = ({ children }) => {
             const authResult = await signInWithPopup(auth, responseGoogle);
             const user = authResult.user;
             console.log('user context', user)
-            // localStorage.setItem('id', authResult.user.uid);
             setUser(user);
 
             const userData = {

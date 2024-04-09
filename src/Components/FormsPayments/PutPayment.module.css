@@ -35,6 +35,8 @@
   border-radius: 15px;
   padding: 10px;
   color: #A79277;
+  outline: none;
+
 }
 
 .textarea_pay{
@@ -45,6 +47,8 @@
   border-radius: 15px;
   padding: 10px;
   color: #A79277;
+  outline: none;
+
 }
 
 .select_pay{

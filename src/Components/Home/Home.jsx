@@ -25,7 +25,6 @@ const Home = () => {
       try {
         
         const response = await paymentService.getAllPayments(user.uid);
-        console.log('soy el date desde home', user.uid);
         setPayments(response);
       } catch (error) {
         console.log(error);
