@@ -8,26 +8,31 @@ import { FaTrash } from "react-icons/fa6";
 import { MdEdit } from "react-icons/md";
 import { toast } from 'react-hot-toast';
 import { useState, useEffect } from 'react';
+import { useAuth } from '../../Context/AuthContext';
 import styles from './Home.module.css';
 
 const Home = () => {
+
+  const { user } = useAuth();
+
   const [payments, setPayments] = useState([]);
   const [editingPaymentId, setEditingPaymentId] = useState(null);
   const [filteredPayments, setFilteredPayments] = useState([]);
-  const id = localStorage.getItem('id')
+
   useEffect(() => {
-    const loadingPayments = async (id) => {
-      
+    const loadingPayments = async () => {
+  
       try {
-        const response = await paymentService.getAllPayments(id);
-        console.log('soy el date desde home', response);
+        
+        const response = await paymentService.getAllPayments(user.uid);
+        console.log('soy el date desde home', user.uid);
         setPayments(response);
       } catch (error) {
         console.log(error);
       }
     };
     loadingPayments();
-  }, [id]);
+  }, [user]);
 
   const handleDeletePayment = async (id) => {
     try {
