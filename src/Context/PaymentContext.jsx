@@ -2,7 +2,8 @@ import axios from 'axios';
 // import { auth } from "../Firebase/FirebaseConfig";
 
 
-const API_URL = 'http://localhost:3000/pay'; 
+// const API_URL = 'http://localhost:3000/pay'; 
+const API_URL = 'https://challenge365.onrender.com'
 
 const paymentService = {
 

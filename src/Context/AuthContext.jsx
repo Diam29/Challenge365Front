@@ -15,6 +15,8 @@ export const useAuth = () => {
 
 export const AuthProvider = ({ children }) => {
 
+  const API_URL = 'https://challenge365.onrender.com'
+
   AuthProvider.propTypes = {
     children: PropTypes.node.isRequired,
   };
@@ -46,7 +48,7 @@ export const AuthProvider = ({ children }) => {
               displayName: response.user.displayName,
               photoURL: response.user.photoURL
             }
-            await axios.post('http://localhost:3000/user/createUser', userData)
+            await axios.post(`${API_URL}/user/createUser`, userData)
             return response
         } catch (error) {
             setError(error.message)
@@ -79,7 +81,7 @@ export const AuthProvider = ({ children }) => {
                 displayName: user.displayName,
                 photoURL: user.photoURL
             }
-            await axios.post('http://localhost:3000/user/createUser', userData)
+            await axios.post(`${API_URL}/user/createUser`, userData)
             console.log('error interno google', userData)
             return authResult;
           
