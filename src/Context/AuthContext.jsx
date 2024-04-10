@@ -15,7 +15,8 @@ export const useAuth = () => {
 
 export const AuthProvider = ({ children }) => {
 
-  const API_URL = 'https://challenge365.onrender.com'
+  // const API_URL = 'https://challenge365.onrender.com'
+  const API_URL = 'http://localhost:4000'
 
   AuthProvider.propTypes = {
     children: PropTypes.node.isRequired,

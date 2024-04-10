@@ -21,6 +21,7 @@ const PaymentCreate = () => {
       if (!user) {
         throw new Error('Usuario no autenticado');
       }
+      console.log('user desde PaymentCreate', user.uid);
       const uid = user.uid;
       const newPayment = await paymentService.createPayment({
         recipient,

@@ -2,20 +2,19 @@ import axios from 'axios';
 // import { auth } from "../Firebase/FirebaseConfig";
 
 
-// const API_URL = 'http://localhost:3000/pay'; 
-const API_URL = 'https://challenge365.onrender.com'
+// const API_URL = 'http://localhost:4000/pay'; 
+const API_URL = 'https://challenge365.onrender.com/pay'
 
 const paymentService = {
 
   
   async getAllPayments(uid) {
-
     return axios.get(`${API_URL}/${uid}`).then(response => response.data)
-      
   },    
     
   async createPayment(paymentData) {
-    return axios.post(`${API_URL}/`, paymentData).then(response => response.data);
+    console.log('soy el axios payment', paymentData)
+    return axios.post(`${API_URL}`,paymentData).then(response => response.data);
   },
 
   async updatePayment(id, paymentData) {

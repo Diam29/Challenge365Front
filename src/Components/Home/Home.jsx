@@ -23,9 +23,13 @@ const Home = () => {
     const loadingPayments = async () => {
   
       try {
-        
-        const response = await paymentService.getAllPayments(user.uid);
-        setPayments(response);
+        if(user && user.uid){
+          const response = await paymentService.getAllPayments(user.uid);
+          console.log('soy uid de home', user.uid)
+          setPayments(response);
+        }else{
+          console.error('El usuario o su ID no están definidos.');
+        }
       } catch (error) {
         console.log(error);
       }
@@ -112,6 +116,7 @@ const Home = () => {
           <table className={styles.table}>
             <thead className={styles.thead}>
               <tr>
+                <th>Fecha</th>
                 <th >Destinatario</th>
                 <th>Importe</th>
                 <th>Descripción</th>
@@ -123,6 +128,7 @@ const Home = () => {
             <tbody>
               {(filteredPayments.length > 0 ? filteredPayments : payments).map(payment => (
                 <tr key={payment.id}>
+                  <td>{new Date(payment.date).toLocaleDateString('es-ES')}</td>
                   <td>{payment.recipient}</td>
                   <td>${payment.amount}</td>
                   <td>{payment.description}</td>
