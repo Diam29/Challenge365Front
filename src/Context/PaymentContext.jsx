@@ -14,7 +14,7 @@ const paymentService = {
     
   async createPayment(paymentData) {
     console.log('soy el axios payment', paymentData)
-    return axios.post(`${API_URL}`,paymentData).then(response => response.data);
+    return axios.post(`${API_URL}/`,paymentData).then(response => response.data);
   },
 
   async updatePayment(id, paymentData) {
