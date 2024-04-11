@@ -2,9 +2,12 @@ import { useState } from 'react';
 import paymentService from '../../Context/PaymentContext.jsx';
 import { auth } from '../../Firebase/FirebaseConfig.js'
 import { toast } from 'react-hot-toast';
+import { useHistory } from 'react-router-dom';
 import style from './PaymentCreate.module.css';
 
 const PaymentCreate = () => {
+
+  const history = useHistory();
 
   const [recipient, setRecipient] = useState('');
   const [amount, setAmount] = useState('');
@@ -37,7 +40,8 @@ const PaymentCreate = () => {
       setDate('');
       setDescription('');
       setType('');
-      window.history.go = '/home';
+      // window.history.go = '/home';
+      history.push('/home');
       toast.success('¡El pago se ha registrado exitosamente!');
     } catch (error) {
       toast.error('Error al crear el pago. Por favor, inténtalo de nuevo más tarde.');
