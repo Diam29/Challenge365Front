@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <div className={styles.container}>
       <div className={styles.contain_icons}>
-        <Link href='https://github.com/Diam29' target="_blank" className={styles.icon}><FaGithub /></Link>
+        <Link  className={styles.icon}><FaGithub /></Link>
         <Link href={'https://api.whatsapp.com/send?phone=5492234546521&text=Hola te escribo desde Challenge365b!!'} target="_blank" className={styles.icon} onClick={handleWhatsappClick}><IoLogoWhatsapp /> </Link>
 
       </div>
