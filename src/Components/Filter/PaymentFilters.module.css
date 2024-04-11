@@ -25,6 +25,7 @@
 }
 
 .button_filterClean{
+  height: 50px;
   padding: 0.5rem;
   border-radius: 10px;
   border: none;
@@ -41,6 +42,7 @@
 }
 
 .button_filterOk{
+  width: 70px;
   padding: 0.5rem;
   border-radius: 10px;
   border: none;
