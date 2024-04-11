@@ -37,7 +37,7 @@ const PaymentCreate = () => {
       setDate('');
       setDescription('');
       setType('');
-      window.location.href = '/home';
+      window.history.go = '/home';
       toast.success('¡El pago se ha registrado exitosamente!');
     } catch (error) {
       toast.error('Error al crear el pago. Por favor, inténtalo de nuevo más tarde.');
