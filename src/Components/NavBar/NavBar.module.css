@@ -1,46 +1,38 @@
-.container_fluid {
-  /* position: static;
-  padding: 1rem 0rem 0rem 0rem;
-  background-color: #D7E4C0;
+.container {
   width: 100vw;
-  height: auto;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  text-align: justify;
-  border: red 1px solid ; */
-  display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 10px 20px;
+  text-align: center;
+  border: none;
+  background: linear-gradient(#99627A, #C88EA7);
+  margin-bottom: 4rem;
 }
 
 .container__box {
-  /* display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  flex-wrap: wrap;
-  text-align: center;
-  align-items: center;
-  background-color: transparent;
-  border: #FFAA64 1px solid; */
+  width: 100vw;
+  height: 5rem;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
+  text-align: center;
+  border: none;
 }
 
 .rounded_pill {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   align-self: self-start;
-  background-color: #C6DCBA;
+  background-color: #643843;
+  padding: 5px;
   border-radius: 50%;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  box-shadow: #BBC3A4 0 5px 10px;
+  box-shadow: #643843 0 5px 10px;
   margin-right: 50rem;
 }
 
 .rounded_pill:hover {
-  color: var(--color-text);
+  color: #E7CBCB;
   background-color: #B47B84;
   box-shadow: #944E63 0 10px 20px;
   transform: translateY(-3px);
@@ -53,8 +45,7 @@
 
 .link__logo {
   text-decoration: none;
-  margin-right: 10px;
-  color: #FFC94A;
+  color: #FFF2E1;
 }
 
 .link__logo:hover {
@@ -63,7 +54,7 @@
 
 .navbar__text {
   font-weight: 700;
-  color: #D7E4C0;
+  color: #FFF2E1;
 }
 
 
@@ -81,7 +72,18 @@
 
 .icon__inicio {
   font-size: 30px;
-  color: #944E63;
+  color: #FFF2E1;
+  border: 1px solid #944E63;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease;
+  padding: 5px;
+  cursor: pointer;
+  background: #944E63;
+}
+
+.icon__inicio:hover {
+  color: #FFAA64;
+  box-shadow: 0 0 10px 5px #FFAA64;
 }
 
 .icon {
@@ -103,37 +105,43 @@
   align-items: center;
 }
 
+.button__logout::backdrop {
+  width: 100px;
+  height: 100px;
+  margin-top: 2rem;
+}
+
 @media only screen and (max-width: 800px) {
 
 
   .navbar__text {
-      display: none;
+    display: none;
   }
 
   .icon {
-      font-size: 20px;
+    font-size: 20px;
   }
 
   .button__icon {
-      width: 30px;
-      height: 30px;
+    width: 30px;
+    height: 30px;
   }
 
   .icon__inicio {
-      font-size: 20px;
+    font-size: 20px;
   }
 
   .link__logo {
-      width: 20px;
+    width: 20px;
   }
 
   .rounded_pill {
-      width: 30px;
-      height: 30px;
+    width: 30px;
+    height: 30px;
   }
 }
 
-.sign_out__button{
+.button__logout {
   background-color: #944E63;
   border: none;
   color: #FFF2E1;

@@ -90,7 +90,7 @@
 .button_return{
   position: fixed;
   bottom: 0;
-  right: 11.7rem;
+  right: 15%;
   width: 10%;
   height: 50px;
   border-radius: 10px;
@@ -107,5 +107,5 @@
   cursor: pointer;
   border: none;
   background: linear-gradient(#6D2932, #561C24);
-  color: #FFF2E1;
+  color: #B0A695;
 }

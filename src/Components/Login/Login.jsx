@@ -14,7 +14,6 @@ const Login = () => {
   const navigate = useNavigate();
     const auth = useAuth();
 
-    // const { user } = auth;
 
     const [registerActive, setRegisterActive] = useState(false);
     const [emailRegister, setEmailRegister] = useState('');
@@ -28,7 +27,6 @@ const Login = () => {
     const [resetEmailSent, setResetEmailSent] = useState(false);
 
     const [showResetForm, setShowResetForm] = useState(false);
-    // const [showLoginForm, setShowLoginForm] = useState(true);
 
     const [validationErrors, setValidationErrors] = useState({});
 
@@ -210,7 +208,7 @@ const Login = () => {
 
             )}
               <div className={`${styles.register} ${registerActive ? styles.active : ''}`} onClick={handleRegisterClick}>
-            <div className={styles.register}>
+            <div className={styles.register_contain}>
                 <form className='form'>
 
                     <label htmlFor="chk" aria-hidden="true">
@@ -241,7 +239,7 @@ const Login = () => {
                             ))}
                         </div>
                     )}
-                    <button className={styles.button__form} onClick={handlerRegister}>
+                    <button className={styles.button__register} onClick={handlerRegister}>
                         Registro
                     </button>
                 </form>

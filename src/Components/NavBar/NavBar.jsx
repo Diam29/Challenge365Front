@@ -2,13 +2,17 @@ import { Link } from 'react-router-dom';
 import { BsFillPiggyBankFill } from "react-icons/bs";
 import { useAuth } from '../../Context/AuthContext';
 import { useState, useEffect } from 'react';
+import PopUp from '../../Views/ModalPopUp/PopUp';
 import styles from './NavBar.module.css';
 
 const Navbar = () => {
-    const { user, logout } = useAuth();
+    const { user } = useAuth();
+
     const [userPhoto, setUserPhoto] = useState(null);
     const [userInitials, setUserInitials] = useState('');
     const [showLogoutButton, setShowLogoutButton] = useState(false);
+
+
 
     useEffect(() => {
         if (user) {
@@ -37,27 +41,17 @@ const Navbar = () => {
         }
     }, [user]);
 
-    const handleLogout = async () => {
-        try {
-            await logout();
-            // Redireccionar al usuario a la página principal después de cerrar sesión
-            window.location.href = '/';
-        } catch (error) {
-            console.error('Error al cerrar sesión:', error);
-        }
-    };
-
     const handleUserPhotoClick = () => {
         setShowLogoutButton(!showLogoutButton);
     };
 
     return (
-        <nav className={styles.container_fluid}>
+        <nav className={styles.container}>
             <div className={styles.container__box}>
                 <Link to='/' className={styles.link__logo}>
-                    <BsFillPiggyBankFill  className={styles.rounded_pill}/>
-                    <span className={styles.navbar__text} >Challenge 365 Diamela Villalba</span>
+                    <BsFillPiggyBankFill  className={styles.rounded_pill}/> 
                 </Link>
+                    <p className={styles.navbar__text} >GESTOR DE PAGOS - DV</p>
                 {user && (
                     <div className={styles.user__info} onClick={handleUserPhotoClick}>
                         {userPhoto ? (
@@ -65,13 +59,14 @@ const Navbar = () => {
                         ) : (
                             <span className={styles.icon__inicio}>{userInitials}</span>
                         )}
-                        {showLogoutButton && <button className={styles.sign_out__button} onClick={handleLogout}>Cerrar sesión</button>}
+                        {showLogoutButton && <PopUp />}
                     </div>
                 )}
             </div>
         </nav>
     );
 }
+
 
 export default Navbar;
 

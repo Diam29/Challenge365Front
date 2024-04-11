@@ -8,6 +8,10 @@
   height: 100vh;
 }
 
+.navbar{
+position: static;
+}
+
 .frame{
   display: flex;
   flex-direction: column;
@@ -64,6 +68,10 @@
   font-size: 2rem;
 }
 
+.title{
+  margin-top: 3rem;
+}
+
 .subtitle{
   color:#E8EFCF;
 }
@@ -81,6 +89,14 @@
   font-size: 1.5rem;
 }
 
+.filters__box{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+}
 
 
 
@@ -153,4 +169,9 @@ color: #FFF2E1;
 .icon{
   color: #944E63;
   font-size: 15px;
+}
+
+.footer{
+  margin-top: 10rem;
+  padding: 0rem;
 }

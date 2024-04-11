@@ -1,5 +1,4 @@
 import axios from 'axios';
-// import { auth } from "../Firebase/FirebaseConfig";
 
 
 // const API_URL = 'http://localhost:4000/pay'; 

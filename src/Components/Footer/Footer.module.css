@@ -1,7 +1,7 @@
 .container{
   width: 100vw;
-  height: 500px;
-  background-color: #B47B84;
+  height: 200px;
+  background: linear-gradient(#C88EA7, #99627A);
   display: flex;
   justify-content: center;
   align-items: center;

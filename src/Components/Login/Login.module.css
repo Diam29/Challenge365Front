@@ -66,14 +66,17 @@ label {
 
 
 .register {
+  width: 100vw;
   position: absolute;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   transition: transform 0.3s ease; 
   background: #944E63;
-  border-radius: 40% / 10%;
+  border-radius: 90% / 50%;
   border: 1px solid rgba(255, 255, 255, 0.55);
   z-index: 1;
   background: #944E63;
@@ -83,8 +86,16 @@ label {
 }
 
 
+.register_contain{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .input__register{
-  width: 80%;
+  width: 350px;
   height: 30px;
   background: linear-gradient(#D7E4C080, #FFC94A80);
   padding: 10px;
@@ -96,6 +107,24 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.button__register{
+  width: 50%;
+  height: 30px;
+  margin: 6px 5%;
+  color: #FFF2E1;
+  background: linear-gradient(#D7E4C080, #FFC94A80);
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .2s ease-in;
+}
+
+.button__register:hover{
+  background: linear-gradient(#D7E4C0, #A79277);
 }
 
 
@@ -147,7 +176,7 @@ label {
   align-self: center;
   width: 20px;
   height: 30px;
-  color: #D7E4C0;
+  color: #FFF2E1;
   font-size: 1rem;
   margin-bottom: 2rem;
 }
@@ -174,6 +203,7 @@ label {
 .google__icon {
   font-size: 25px;
   align-self: center;
+  color: #FFF2E1;
 }
 
 /* Forgot */

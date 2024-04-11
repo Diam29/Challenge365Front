@@ -25,7 +25,7 @@ const Home = () => {
       try {
         if(user && user.uid){
           const response = await paymentService.getAllPayments(user.uid);
-          console.log('soy uid de home', user.uid)
+          console.log('soy uid de home', user.uid, user.email)
           setPayments(response);
         }else{
           console.error('El usuario o su ID no están definidos.');
@@ -101,7 +101,7 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
-      <NavBar />
+      <NavBar className={styles.navbar}/>
       <div className={styles.frame}>
         <h1 className={styles.title}>BIENVENIDO A GESTORdePAGOS.com 👋 </h1>
         <div className={styles.actionContainer}>
@@ -109,7 +109,7 @@ const Home = () => {
 
           <div className={styles.contain__filter}>
             <h2 className={styles.subtitle}>Filtrar pagos</h2>
-            <PaymentFilters applyFilters={applyFilters} className={styles.filters}/>
+            <PaymentFilters applyFilters={applyFilters} className={styles.filters__box}/>
           </div>
         </div>
         <div className={styles.pay__list}>
@@ -152,7 +152,9 @@ const Home = () => {
           )}
         </div>
       </div>
-      <Footer />
+      <footer className={styles.footer}>
+        <Footer />
+      </footer>
     </div>
   )
 }
